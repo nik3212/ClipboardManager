@@ -20,9 +20,6 @@ public final class ClipboardManager {
     /// An instance of ClipboardManagerDelegate.
     public weak var delegate: ClipboardManagerDelegate?
     
-    /// Stored all items from the system clipboard.
-    private(set) var items = [ClipboardItem]()
-    
     /// A ClipboardEngine value that contains the system clipboard instance.
     private let clipboard: ClipboardEngine = Clipboard()
     
@@ -46,16 +43,8 @@ public final class ClipboardManager {
         clipboard.set(item: item)
     }
     
-    /// Remove item from history.
-    ///
-    /// - Parameter item: Item to be deleted.
-    public func remove(item: ClipboardItem) {
-        items = items.filter { $0 != item }
-    }
-    
     /// Clear stored data and item in the system clipboard.
     public func clear() {
-        items.removeAll()
         clipboard.clearContents()
     }
 }
@@ -64,7 +53,6 @@ public final class ClipboardManager {
 
 extension ClipboardManager: ClipboardCheckerDelegate {
     func clipboardDidChanged(item: ClipboardItem) {
-        items.append(item)
         delegate?.clipboardDidChange(item: item)
     }
 }
