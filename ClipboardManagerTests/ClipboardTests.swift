@@ -65,10 +65,9 @@ class ClipboardTests: XCTestCase {
         let window = WindowInfo(icon: nil, applicationName: "Test application")
         let content = ClipboardContent(data: testData,
                                        date: nil,
-                                       path: nil,
                                        type: type)
         
-        return ClipboardItem(windowInfo: window,
+        return ClipboardItem(window: window,
                              content: content)
     }
 }

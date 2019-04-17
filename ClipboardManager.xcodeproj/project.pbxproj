@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3830D92621F7AA2700730F7A /* ClipboardCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3830D92521F7AA2700730F7A /* ClipboardCheckerTests.swift */; };
+		3830D92821F7AFA300730F7A /* ClipboardMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3830D92721F7AFA300730F7A /* ClipboardMock.swift */; };
+		3842AED322664C0100610DE5 /* TimerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842AED222664C0100610DE5 /* TimerMock.swift */; };
+		3842AED7226656CE00610DE5 /* ClipboardCheckerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842AED6226656CE00610DE5 /* ClipboardCheckerDelegateMock.swift */; };
+		3842AED92266585500610DE5 /* ClipboardEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842AED82266585500610DE5 /* ClipboardEngine.swift */; };
+		3842AEDB2266592E00610DE5 /* ClipboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842AEDA2266592E00610DE5 /* ClipboardManager.swift */; };
+		3842AEDE2266620300610DE5 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842AEDD2266620300610DE5 /* WindowManager.swift */; };
+		3842AEE12266627A00610DE5 /* WindowManagerHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3842AEE02266627A00610DE5 /* WindowManagerHelper.cpp */; };
+		3842AEE32266629D00610DE5 /* ContentProvider.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3842AEE22266629D00610DE5 /* ContentProvider.mm */; };
+		3842AEE6226663CA00610DE5 /* WindowManagerBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 3842AEE52266633200610DE5 /* WindowManagerBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3842AEE7226663EE00610DE5 /* WindowManagerHelper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3842AEDF2266623D00610DE5 /* WindowManagerHelper.hpp */; };
+		38639AD5222C50DE002B4F9F /* TimerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38639AD4222C50DE002B4F9F /* TimerFactory.swift */; };
 		3868A18B21B7174500C0563C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868A18A21B7174500C0563C /* Clipboard.swift */; };
 		3868A18D21B7177900C0563C /* ClipboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868A18C21B7177900C0563C /* ClipboardTests.swift */; };
 		3868A19121B7192000C0563C /* PasteboardMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868A19021B7192000C0563C /* PasteboardMock.swift */; };
@@ -17,6 +29,7 @@
 		3868A19F21B725F200C0563C /* ClipboardItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868A19E21B725F200C0563C /* ClipboardItem+.swift */; };
 		387CD4B021A605620066C3BE /* ClipboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387CD4A621A605620066C3BE /* ClipboardManager.framework */; };
 		387CD4B721A605620066C3BE /* ClipboardManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 387CD4A921A605620066C3BE /* ClipboardManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38FA455621EFCD8900592395 /* ClipboardChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA455521EFCD8900592395 /* ClipboardChecker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +43,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3830D92521F7AA2700730F7A /* ClipboardCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardCheckerTests.swift; sourceTree = "<group>"; };
+		3830D92721F7AFA300730F7A /* ClipboardMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMock.swift; sourceTree = "<group>"; };
+		3842AED222664C0100610DE5 /* TimerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMock.swift; sourceTree = "<group>"; };
+		3842AED6226656CE00610DE5 /* ClipboardCheckerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardCheckerDelegateMock.swift; sourceTree = "<group>"; };
+		3842AED82266585500610DE5 /* ClipboardEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardEngine.swift; sourceTree = "<group>"; };
+		3842AEDA2266592E00610DE5 /* ClipboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardManager.swift; sourceTree = "<group>"; };
+		3842AEDD2266620300610DE5 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
+		3842AEDF2266623D00610DE5 /* WindowManagerHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WindowManagerHelper.hpp; sourceTree = "<group>"; };
+		3842AEE02266627A00610DE5 /* WindowManagerHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WindowManagerHelper.cpp; sourceTree = "<group>"; };
+		3842AEE22266629D00610DE5 /* ContentProvider.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ContentProvider.mm; sourceTree = "<group>"; };
+		3842AEE52266633200610DE5 /* WindowManagerBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WindowManagerBridge.h; sourceTree = "<group>"; };
+		38639AD4222C50DE002B4F9F /* TimerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFactory.swift; sourceTree = "<group>"; };
 		3868A18A21B7174500C0563C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
 		3868A18C21B7177900C0563C /* ClipboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardTests.swift; sourceTree = "<group>"; };
 		3868A19021B7192000C0563C /* PasteboardMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardMock.swift; sourceTree = "<group>"; };
@@ -43,6 +68,7 @@
 		387CD4AA21A605620066C3BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387CD4AF21A605620066C3BE /* ClipboardManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipboardManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		387CD4B621A605620066C3BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38FA455521EFCD8900592395 /* ClipboardChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardChecker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +90,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3842AEDC226661E100610DE5 /* WindowManager */ = {
+			isa = PBXGroup;
+			children = (
+				3842AEDD2266620300610DE5 /* WindowManager.swift */,
+				3842AEDF2266623D00610DE5 /* WindowManagerHelper.hpp */,
+				3842AEE02266627A00610DE5 /* WindowManagerHelper.cpp */,
+				3842AEE22266629D00610DE5 /* ContentProvider.mm */,
+				3842AEE52266633200610DE5 /* WindowManagerBridge.h */,
+			);
+			path = WindowManager;
+			sourceTree = "<group>";
+		};
+		38639AD3222C50CE002B4F9F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				38639AD4222C50DE002B4F9F /* TimerFactory.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		3868A18821B7172100C0563C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3868A18921B7173500C0563C /* Clipboard */,
 				3868A19221B71C1400C0563C /* Common */,
 				3868A18E21B717F200C0563C /* Models */,
-				3868A18921B7173500C0563C /* Clipboard */,
+				3842AEDC226661E100610DE5 /* WindowManager */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -78,6 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				3868A18A21B7174500C0563C /* Clipboard.swift */,
+				38FA455521EFCD8900592395 /* ClipboardChecker.swift */,
+				3842AED82266585500610DE5 /* ClipboardEngine.swift */,
+				3842AEDA2266592E00610DE5 /* ClipboardManager.swift */,
 			);
 			path = Clipboard;
 			sourceTree = "<group>";
@@ -95,7 +145,10 @@
 		3868A18F21B7191100C0563C /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				3842AED6226656CE00610DE5 /* ClipboardCheckerDelegateMock.swift */,
+				3830D92721F7AFA300730F7A /* ClipboardMock.swift */,
 				3868A19021B7192000C0563C /* PasteboardMock.swift */,
+				3842AED222664C0100610DE5 /* TimerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -103,6 +156,7 @@
 		3868A19221B71C1400C0563C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				38639AD3222C50CE002B4F9F /* Utils */,
 				3868A19321B71C1900C0563C /* Extensions */,
 			);
 			path = Common;
@@ -150,6 +204,7 @@
 			children = (
 				3868A18F21B7191100C0563C /* Mocks */,
 				3868A18C21B7177900C0563C /* ClipboardTests.swift */,
+				3830D92521F7AA2700730F7A /* ClipboardCheckerTests.swift */,
 				387CD4B621A605620066C3BE /* Info.plist */,
 			);
 			path = ClipboardManagerTests;
@@ -162,7 +217,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3842AEE7226663EE00610DE5 /* WindowManagerHelper.hpp in Headers */,
 				387CD4B721A605620066C3BE /* ClipboardManager.h in Headers */,
+				3842AEE6226663CA00610DE5 /* WindowManagerBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +274,7 @@
 				TargetAttributes = {
 					387CD4A521A605620066C3BE = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 					387CD4AE21A605620066C3BE = {
 						CreatedOnToolsVersion = 10.1;
@@ -230,6 +287,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 387CD49C21A605620066C3BE;
 			productRefGroup = 387CD4A721A605620066C3BE /* Products */;
@@ -264,12 +322,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3842AEDB2266592E00610DE5 /* ClipboardManager.swift in Sources */,
 				3868A19521B71C2A00C0563C /* Pasteboard+.swift in Sources */,
 				3868A19F21B725F200C0563C /* ClipboardItem+.swift in Sources */,
 				3868A18B21B7174500C0563C /* Clipboard.swift in Sources */,
+				3842AED92266585500610DE5 /* ClipboardEngine.swift in Sources */,
 				3868A19921B7227A00C0563C /* ClipboardItem.swift in Sources */,
+				3842AEDE2266620300610DE5 /* WindowManager.swift in Sources */,
 				3868A19D21B724FE00C0563C /* ClipboardContent.swift in Sources */,
 				3868A19B21B7247800C0563C /* WindowInfo.swift in Sources */,
+				3842AEE32266629D00610DE5 /* ContentProvider.mm in Sources */,
+				38639AD5222C50DE002B4F9F /* TimerFactory.swift in Sources */,
+				38FA455621EFCD8900592395 /* ClipboardChecker.swift in Sources */,
+				3842AEE12266627A00610DE5 /* WindowManagerHelper.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +342,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3830D92821F7AFA300730F7A /* ClipboardMock.swift in Sources */,
+				3842AED7226656CE00610DE5 /* ClipboardCheckerDelegateMock.swift in Sources */,
+				3842AED322664C0100610DE5 /* TimerMock.swift in Sources */,
 				3868A18D21B7177900C0563C /* ClipboardTests.swift in Sources */,
+				3830D92621F7AA2700730F7A /* ClipboardCheckerTests.swift in Sources */,
 				3868A19121B7192000C0563C /* PasteboardMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,7 +507,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -465,7 +534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikitavasilev.ClipboardManager;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -484,7 +553,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikitavasilev.ClipboardManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -503,7 +572,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikitavasilev.ClipboardManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
