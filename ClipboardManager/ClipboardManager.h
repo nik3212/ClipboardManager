@@ -16,4 +16,4 @@ FOUNDATION_EXPORT const unsigned char ClipboardManagerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ClipboardManager/PublicHeader.h>
 
-
+#import <ClipboardManager/WindowManagerBridge.h>

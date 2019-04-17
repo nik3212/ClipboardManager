@@ -8,7 +8,6 @@
 
 extension ClipboardItem: Equatable {
     public static func ==(lhs: ClipboardItem, rhs: ClipboardItem) -> Bool {
-        return lhs.content.data == rhs.content.data &&
-               lhs.content.path == rhs.content.path
+        return lhs.content.data == rhs.content.data
     }
 }

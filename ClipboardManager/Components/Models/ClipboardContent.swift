@@ -9,7 +9,6 @@
 public protocol Content {
     var data: Data? { get }
     var date: Date? { get }
-    var path: String? { get }
     var type: NSPasteboard.PasteboardType? { get }
 }
 
@@ -18,14 +17,11 @@ public class ClipboardContent: Content {
     
     public let date: Date?
     
-    public let path: String?
-    
     public let type: NSPasteboard.PasteboardType?
     
-    public init(data: Data?, date: Date?, path: String?, type: NSPasteboard.PasteboardType?) {
+    public init(data: Data?, date: Date?, type: NSPasteboard.PasteboardType?) {
         self.data = data
         self.date = date
-        self.path = path
         self.type = type
     }
 }
