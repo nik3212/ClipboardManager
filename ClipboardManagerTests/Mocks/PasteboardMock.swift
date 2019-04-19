@@ -20,6 +20,10 @@ class PasteboardMock: PasteboardEngine {
         return true
     }
     
+    func write(object: Any, type: NSPasteboard.PasteboardType) -> Bool {
+        return true
+    }
+    
     func clear() {
         isClear = true
     }

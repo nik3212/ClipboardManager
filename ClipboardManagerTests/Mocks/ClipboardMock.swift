@@ -17,6 +17,10 @@ class ClibpoardMock: ClipboardEngine {
     func fetch() throws -> NSPasteboardItem {
         return (item?.content.pasteboardItem)!
     }
+    
+    func set(object: Any, type: NSPasteboard.PasteboardType) {
+        
+    }
 
     func set(item: ClipboardItem) {
         self.item = item
