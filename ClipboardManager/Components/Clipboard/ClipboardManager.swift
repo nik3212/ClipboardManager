@@ -21,7 +21,7 @@ public final class ClipboardManager {
     public weak var delegate: ClipboardManagerDelegate?
     
     /// A ClipboardEngine value that contains the system clipboard instance.
-    private let clipboard: ClipboardEngine = Clipboard()
+    private var clipboard: ClipboardEngine = Clipboard()
     
     /// A ClipboardChecker value that contains the clipboard checker instance.
     private let clipboardChecker: ClipboardChecker
@@ -39,7 +39,7 @@ public final class ClipboardManager {
     /// Copy the item to the system clipboard.
     ///
     /// - Parameter item: Item to be copy to the system clipboard.
-    public func copy(item: ClipboardItem) {
+    public func copy(_ item: ClipboardItem) {
         clipboard.set(item: item)
     }
     

@@ -13,17 +13,13 @@ public protocol PasteboardEngine {
 }
 
 extension NSPasteboard: PasteboardEngine {
-    
     @discardableResult
     public func write(object: ClipboardItem) -> Bool {
-        if let data = object.content.data,
-           let type = object.content.type {
-            let pasteboardItem = NSPasteboardItem()
-            pasteboardItem.setData(data, forType: type)
-            return writeObjects([pasteboardItem])
+        guard let item = object.content.pasteboardItem else {
+            return false
         }
-
-        return false
+        
+        return writeObjects([item])
     }
     
     public func getLast() -> NSPasteboardItem? {

@@ -7,21 +7,20 @@
 //
 
 public protocol Content {
-    var data: Data? { get }
+    /// A NSPasteboardItem value that contains the data and types.
+    var pasteboardItem: NSPasteboardItem? { get }
+    
+    /// A Date value that contains the date when item was saved.
     var date: Date? { get }
-    var type: NSPasteboard.PasteboardType? { get }
 }
 
 public class ClipboardContent: Content {
-    public let data: Data?
+    public let pasteboardItem: NSPasteboardItem?
     
     public let date: Date?
     
-    public let type: NSPasteboard.PasteboardType?
-    
-    public init(data: Data?, date: Date?, type: NSPasteboard.PasteboardType?) {
-        self.data = data
+    public init(item: NSPasteboardItem?, date: Date?) {
+        self.pasteboardItem = item
         self.date = date
-        self.type = type
     }
 }

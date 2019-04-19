@@ -7,7 +7,10 @@
 //
 
 public protocol Item {
+    /// A Window value that contains the application data.
     var windowInfo: Window { get }
+    
+    /// A Content value that contains the item and the date.
     var content: Content { get }
 }
 
@@ -23,10 +26,9 @@ public struct ClipboardItem: Item {
 }
 
 extension ClipboardItem {
-    init(window: Window, pasteboard: PasteboardItem) {
-        let content = ClipboardContent(data: pasteboard.0,
-                                       date: Date(),
-                                       type: pasteboard.1)
+    init(window: Window, pasteboardItem: NSPasteboardItem) {
+        let content = ClipboardContent(item: pasteboardItem,
+                                       date: Date())
         self.init(window: window, content: content)
     }
 }

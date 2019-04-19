@@ -6,6 +6,8 @@
 //  Copyright © 2018 Никита Васильев. All rights reserved.
 //
 
+public typealias ClipboardType = NSPasteboard.PasteboardType
+
 enum ClipboardError: Error {
     case invalidFetch
 }
@@ -32,15 +34,12 @@ class Clipboard: ClipboardEngine {
     ///
     /// - Returns: A tuple containing the data and the type of this data.
     /// - Throws: An error of type `ClipboardError`
-    func fetch() throws -> PasteboardItem {
-        let pasteboardItem = pasteboard.getLast()
-
-        if let type = pasteboardItem?.types.first,
-           let data = pasteboardItem?.data(forType: type) {
-            return (data, type)
-        } else {
+    func fetch() throws -> NSPasteboardItem {
+        guard let item = pasteboard.getLast() else {
             throw ClipboardError.invalidFetch
         }
+        
+        return item
     }
     
     /// Set clipboard item to system pasteboard.
@@ -55,25 +54,4 @@ class Clipboard: ClipboardEngine {
     func clearContents() {
         pasteboard.clear()
     }
-    
-    // MARK: Supported Types
-    
-    /// Array contains pasteboard's supported types
-    private let supportedTypes: [NSPasteboard.PasteboardType] = [.fileURL,
-                                                                 .URL,
-                                                                 .color,
-                                                                 .fileContents,
-                                                                 .font,
-                                                                 .html,
-                                                                 .multipleTextSelection,
-                                                                 .pdf,
-                                                                 .png,
-                                                                 .rtf,
-                                                                 .rtfd,
-                                                                 .ruler,
-                                                                 .sound,
-                                                                 .string,
-                                                                 .tabularText,
-                                                                 .textFinderOptions,
-                                                                 .tiff]
 }

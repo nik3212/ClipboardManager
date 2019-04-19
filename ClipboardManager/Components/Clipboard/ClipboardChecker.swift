@@ -6,8 +6,6 @@
 //  Copyright © 2019 Никита Васильев. All rights reserved.
 //
 
-typealias PasteboardItem = (Data, NSPasteboard.PasteboardType)
-
 protocol ClipboardCheckerDelegate: class {
     /// Tells the delegate that a new item was copied.
     ///
@@ -32,7 +30,7 @@ final class ClipboardChecker {
     private let timeInterval: TimeInterval = 0.25
     
     /// Last copied item.
-    private var lastCopiedItem: PasteboardItem?
+    private var lastCopiedItem: NSPasteboardItem?
     
     /// A DefaultTimer value that contains the timer instance.
     private var timer: DefaultTimer!
@@ -71,13 +69,11 @@ final class ClipboardChecker {
     /// Check the system clipboard.
     func checkClipboard() {
         do {
-            let values = try clipboard.fetch()
+            let item = try clipboard.fetch()
     
-            item = createClipboardItem(values)
-            
-            if lastCopiedItem == nil || lastCopiedItem?.0 != values.0 {
-                lastCopiedItem = values
-                delegate?.clipboardDidChanged(item: item!)
+            if lastCopiedItem == nil || lastCopiedItem != item {
+                lastCopiedItem = item
+                delegate?.clipboardDidChanged(item: createClipboardItem(item))
             }
         } catch {
             print("Clipboard can't fetch data from the clipboard.")
@@ -88,8 +84,8 @@ final class ClipboardChecker {
     ///
     /// - Parameter values: A tuple with data and type of content.
     /// - Returns: ClipboardItem instance.
-    private func createClipboardItem(_ values: PasteboardItem) -> ClipboardItem {
+    private func createClipboardItem(_ item: NSPasteboardItem) -> ClipboardItem {
         return ClipboardItem(window: WindowManager.shared.windowInfo,
-                             pasteboard: values)
+                             pasteboardItem: item)
     }
 }

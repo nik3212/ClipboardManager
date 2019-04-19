@@ -7,7 +7,10 @@
 //
 
 public protocol Window {
+    /// A NSImage value that contains the icon of application.
     var icon: NSImage? { get }
+    
+    /// A String value that contains the application name.
     var applicationName: String? { get }
 }
 
