@@ -18,6 +18,13 @@ protocol ClipboardEngine {
     /// - Parameter item: An item to be inserted to the pasteboard.
     func set(item: ClipboardItem)
     
+    /// Set data to system pasteboard.
+    ///
+    /// - Parameters:
+    ///   - object: A property list containing data to initialize the receiver.
+    ///   - type: A UTI supported by the receiver for reading (one of the types returned by readableTypes(for:)).
+    func set(object: Any, type: NSPasteboard.PasteboardType)
+    
     /// Remove data from pasteboard.
     func clearContents()
 }

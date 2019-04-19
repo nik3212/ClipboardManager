@@ -43,6 +43,15 @@ public final class ClipboardManager {
         clipboard.set(item: item)
     }
     
+    /// Copy the item to the system clipboard.
+    ///
+    /// - Parameters:
+    ///   - object: A property list containing data to initialize the receiver.
+    ///   - type: A UTI supported by the receiver for reading (one of the types returned by readableTypes(for:)).
+    public func copy(object: Any, type: NSPasteboard.PasteboardType) {
+        clipboard.set(object: object, type: type)
+    }
+    
     /// Clear stored data and item in the system clipboard.
     public func clear() {
         clipboard.clearContents()

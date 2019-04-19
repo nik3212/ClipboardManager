@@ -8,6 +8,7 @@
 
 public protocol PasteboardEngine {
     func write(object: ClipboardItem) -> Bool
+    func write(object: Any, type: NSPasteboard.PasteboardType) -> Bool
     func getLast() -> NSPasteboardItem?
     func clear()
 }
@@ -20,6 +21,15 @@ extension NSPasteboard: PasteboardEngine {
         }
         
         return writeObjects([item])
+    }
+    
+    @discardableResult
+    public func write(object: Any, type: NSPasteboard.PasteboardType) -> Bool {
+        guard let pasteboardItem = NSPasteboardItem(pasteboardPropertyList: object,
+                                                    ofType: type) else {
+            return false
+        }
+        return writeObjects([pasteboardItem])
     }
     
     public func getLast() -> NSPasteboardItem? {

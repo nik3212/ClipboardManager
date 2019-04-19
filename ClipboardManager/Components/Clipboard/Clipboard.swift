@@ -50,6 +50,16 @@ class Clipboard: ClipboardEngine {
         _ = pasteboard.write(object: item)
     }
     
+    /// Set clipboard item to system pasteboard.
+    ///
+    /// - Parameters:
+    ///   - object: A property list containing data to initialize the receiver.
+    ///   - type: A UTI supported by the receiver for reading (one of the types returned by readableTypes(for:)).
+    func set(object: Any, type: NSPasteboard.PasteboardType) {
+        pasteboard.clear()
+        _ = pasteboard.write(object: object, type: type)
+    }
+    
     /// Clears the existing contents of the pasteboard
     func clearContents() {
         pasteboard.clear()
