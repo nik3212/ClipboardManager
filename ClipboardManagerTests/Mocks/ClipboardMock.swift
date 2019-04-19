@@ -6,22 +6,22 @@
 //  Copyright © 2019 Никита Васильев. All rights reserved.
 //
 
-import ClipboardManager
+@testable import ClipboardManager
 
 class ClibpoardMock: ClipboardEngine {
-    
+
     var item: ClipboardItem?
-    
+
     private(set) var isClear = false
-    
-    func fetch() throws -> (Data, NSPasteboard.PasteboardType) {
-        return (Data(), NSPasteboard.PasteboardType.string)
+
+    func fetch() throws -> NSPasteboardItem {
+        return (item?.content.pasteboardItem)!
     }
-    
+
     func set(item: ClipboardItem) {
         self.item = item
     }
-    
+
     func clearContents() {
         isClear = true
     }

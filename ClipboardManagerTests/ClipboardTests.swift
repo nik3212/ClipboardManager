@@ -39,15 +39,25 @@ class ClipboardTests: XCTestCase {
         pasteboard.object = testObject
         do {
             let response = try clipboard.fetch()
-            XCTAssertEqual(response.0, testObject.content.data, "Data should be equal")
-            XCTAssertEqual(response.1, testObject.content.type, "Types shoild be equal")
+            XCTAssertEqual(response, testObject.content.pasteboardItem, "Data should be equal")
         } catch {
             XCTFail("Can not fetch data from clipboard")
         }
     }
     
     func testThatCouldNotGetDataFromClipboard() {
-        pasteboard.object = createFakeClipboardItem(text: nil, type: nil)
+        let content = ClipboardContent(item: nil,
+                                       date: nil)
+        
+        let windowInfo = WindowInfo(icon: nil,
+                                    applicationName: nil)
+        
+        let item = ClipboardItem(window: windowInfo,
+                                 content: content)
+        
+        pasteboard.object = item
+        
+        
         XCTAssertThrowsError(try clipboard.fetch())
     }
     
@@ -58,14 +68,15 @@ class ClipboardTests: XCTestCase {
                                              type: .string)
     }
     
-    private func createFakeClipboardItem(text: String?,
-                                         type: NSPasteboard.PasteboardType?) -> ClipboardItem {
-        let testData = text?.data(using: .utf8)
-        
+    private func createFakeClipboardItem(text: String,
+                                         type: NSPasteboard.PasteboardType) -> ClipboardItem {
         let window = WindowInfo(icon: nil, applicationName: "Test application")
-        let content = ClipboardContent(data: testData,
-                                       date: nil,
-                                       type: type)
+        
+        let pasteboardItem = NSPasteboardItem(pasteboardPropertyList: text,
+                                              ofType: type)
+        
+        let content = ClipboardContent(item: pasteboardItem,
+                                       date: nil)
         
         return ClipboardItem(window: window,
                              content: content)

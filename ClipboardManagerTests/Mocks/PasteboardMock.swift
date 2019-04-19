@@ -25,15 +25,7 @@ class PasteboardMock: PasteboardEngine {
     }
     
     func getLast() -> NSPasteboardItem? {
-        guard let object = object,
-              let data = object.content.data,
-              let type = object.content.type else {
-            return nil
-        }
-        
-        let item = NSPasteboardItem()
-        item.setData(data, forType: type)
-        
+        guard let item = object?.content.pasteboardItem else { return nil }
         return item
     }
 }

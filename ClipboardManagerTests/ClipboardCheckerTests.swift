@@ -39,15 +39,16 @@ class ClipboardCheckerTests: XCTestCase {
         XCTAssertEqual(item, checkerDelegate.item, "Items should be equal")
     }
     
-    private func createFakeClipboardItem(text: String?,
-                                         type: NSPasteboard.PasteboardType?) -> ClipboardItem {
-        let testData = text?.data(using: .utf8)
-        
+    private func createFakeClipboardItem(text: String,
+                                         type: NSPasteboard.PasteboardType) -> ClipboardItem {
         let window = WindowInfo(icon: nil, applicationName: "Test application")
-        let content = ClipboardContent(data: testData,
-                                       date: nil,
-                                       type: type)
         
+        let pasteboardItem = NSPasteboardItem(pasteboardPropertyList: text,
+                                              ofType: type)
+
+        let content = ClipboardContent(item: pasteboardItem,
+                                       date: nil)
+
         return ClipboardItem(window: window,
                              content: content)
     }
