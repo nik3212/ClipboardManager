@@ -1,0 +1,5 @@
+os: osx
+osx_image: xcode10.2
+language: swift
+script: xcodebuild clean build test -project ClipboardManager.xcodeproj -scheme ClipboardManager -sdk macosx10.14 CODE_SIGNING_REQUIRED=NO
+
