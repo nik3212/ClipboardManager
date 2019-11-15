@@ -5,7 +5,9 @@
 <p align="center">
 <a href="https://travis-ci.org/nik3212/ClipboardManager"><img src="https://img.shields.io/travis/nik3212/ClipboardManager/master.svg"></a>
 <a href="https://github.com/nik3212/ClipboardManager/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
-
+<a href="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
+<a href="https://img.shields.io/github/repo-size/nik3212/ClipboardManager"><img src="https://img.shields.io/github/repo-size/nik3212/ClipboardManager"></a>
+  
 ClipboardManager is a wrapper for the system clipboard for macOS.
 
 - [Features](#features)
@@ -29,6 +31,18 @@ ClipboardManager is a wrapper for the system clipboard for macOS.
 * Swift 5.0+
 
 ## Installation
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate ClipboardManager into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```
+github "nik3212/ClipboardManager" ~> 1.0.0
+```
+
+```bash
+$ carthage update
+```
 
 ### Manually
 
