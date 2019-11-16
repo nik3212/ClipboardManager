@@ -7,6 +7,7 @@
 <a href="https://github.com/nik3212/ClipboardManager/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
 <a href="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 <a href="https://img.shields.io/github/repo-size/nik3212/ClipboardManager"><img src="https://img.shields.io/github/repo-size/nik3212/ClipboardManager"></a>
+<a href="https://img.shields.io/badge/Language-Swift-orange.svg"><img src="https://img.shields.io/badge/Language-Swift-orange.svg"></a>
   
 ClipboardManager is a wrapper for the system clipboard for macOS.
 
