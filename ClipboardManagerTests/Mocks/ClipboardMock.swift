@@ -14,8 +14,8 @@ class ClibpoardMock: ClipboardEngine {
 
     private(set) var isClear = false
 
-    func fetch() throws -> NSPasteboardItem {
-        return (item?.content.pasteboardItem)!
+    func fetch() -> NSPasteboardItem? {
+        return item?.content.pasteboardItem
     }
     
     func set(object: Any, type: NSPasteboard.PasteboardType) {

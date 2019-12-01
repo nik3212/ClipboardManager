@@ -8,10 +8,6 @@
 
 public typealias ClipboardType = NSPasteboard.PasteboardType
 
-enum ClipboardError: Error {
-    case invalidFetch
-}
-
 class Clipboard: ClipboardEngine {
     
     // MARK: Properties
@@ -33,13 +29,8 @@ class Clipboard: ClipboardEngine {
     /// Fetch an object from the system pasteboard.
     ///
     /// - Returns: A tuple containing the data and the type of this data.
-    /// - Throws: An error of type `ClipboardError`
-    func fetch() throws -> NSPasteboardItem {
-        guard let item = pasteboard.getLast() else {
-            throw ClipboardError.invalidFetch
-        }
-        
-        return item
+    func fetch() -> NSPasteboardItem? {
+        return pasteboard.getLast()
     }
     
     /// Set clipboard item to system pasteboard.

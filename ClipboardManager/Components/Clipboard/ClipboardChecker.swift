@@ -68,15 +68,11 @@ final class ClipboardChecker {
     
     /// Check the system clipboard.
     func checkClipboard() {
-        do {
-            let item = try clipboard.fetch()
-    
-            if lastCopiedItem == nil || lastCopiedItem != item {
-                lastCopiedItem = item
-                delegate?.clipboardDidChanged(item: createClipboardItem(item))
-            }
-        } catch {
-            print("Clipboard can't fetch data from the clipboard.")
+        guard let item = clipboard.fetch() else { return }
+        
+        if lastCopiedItem == nil || lastCopiedItem != item {
+            lastCopiedItem = item
+            delegate?.clipboardDidChanged(item: createClipboardItem(item))
         }
     }
     

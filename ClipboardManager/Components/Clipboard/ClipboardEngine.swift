@@ -10,8 +10,7 @@ protocol ClipboardEngine {
     /// Fetch data from system pasteboard.
     ///
     /// - Returns: A tuple that contains a data and a pasteboard type.
-    /// - Throws: `ClipboardError.invalidFetch`.
-    func fetch() throws -> NSPasteboardItem
+    func fetch() -> NSPasteboardItem?
     
     /// Set data to system pasteboard.
     ///

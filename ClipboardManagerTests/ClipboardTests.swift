@@ -37,28 +37,9 @@ class ClipboardTests: XCTestCase {
     
     func testGetDataFromClipboard() {
         pasteboard.object = testObject
-        do {
-            let response = try clipboard.fetch()
-            XCTAssertEqual(response, testObject.content.pasteboardItem, "Data should be equal")
-        } catch {
-            XCTFail("Can not fetch data from clipboard")
-        }
-    }
-    
-    func testThatCouldNotGetDataFromClipboard() {
-        let content = ClipboardContent(item: nil,
-                                       date: nil)
         
-        let windowInfo = WindowInfo(icon: nil,
-                                    applicationName: nil)
-        
-        let item = ClipboardItem(window: windowInfo,
-                                 content: content)
-        
-        pasteboard.object = item
-        
-        
-        XCTAssertThrowsError(try clipboard.fetch())
+        let response = clipboard.fetch()
+        XCTAssertEqual(response, testObject.content.pasteboardItem, "Data should be equal")
     }
     
     private func setup() {
